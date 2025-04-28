@@ -8,9 +8,9 @@ G_G = 16  # Gluones: 8 colores x 2 spins
 VOLUME = 2.1446605848506324  # Volumen fijo del protón en fm^3
 HBAR_C = 197.3269804  # MeV*fm (para conversiones)
 
-# Factores de conversión
-CONVERSION_T4 = (1e9 / 1.973e8) ** 3   # Para T^4 (MeV^4 a MeV/fm^3)
-CONVERSION_T7 = (1e9 / 1.973e8) ** 6   # Para T^7 (MeV^7 a MeV/fm^3)
+# Factores de conversión corregidos
+CONVERSION_T4 = 1 / (HBAR_C ** 3)  # MeV^4 a MeV/fm^3
+CONVERSION_T7 = 1 / (HBAR_C ** 6)  # MeV^7 * fm^3 a MeV/fm^3
 
 # Presión de gluones (Bose-Einstein ultrarrelativista)
 def pressure_gluons(T):
